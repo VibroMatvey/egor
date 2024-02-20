@@ -1,0 +1,8 @@
+monolog:
+    handlers:
+        request_log:
+            type: rotating_file
+            max_files: 90
+            level: debug
+            path: '%kernel.logs_dir%/requests/%kernel.environment%.log'
+            channels: request_log
